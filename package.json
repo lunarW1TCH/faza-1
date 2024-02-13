@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "tsx watch src/index.tsx",
+    "tailwind": "bunx tailwindcss -i ./src/pages/input.css -o ./src/static/public/css/output.css --watch"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.7.0",
+    "autoprefixer": "^10.4.17",
+    "hono": "latest",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^3.12.2"
+  },
+  "type": "module"
+}
