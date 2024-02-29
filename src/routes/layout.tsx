@@ -36,9 +36,7 @@ const Layout: FC<PropsWithChildren> = (props) => {
             <button x-on:click="console.log('oi')">cl</button>
             <span x-data x-text='count'></span>
           </div>
-          <Button x-data x-on:click="console.log('x')">
-            Miau
-          </Button>
+          <Button variant='ghost'>Miau</Button>
         </main>
         <Footer />
       </body>

@@ -1,13 +1,36 @@
 import { PropsWithChildren } from 'hono/jsx';
+import { tv, type VariantProps } from 'tailwind-variants';
 
-export const buttonClass =
-  'border-solid border rounded border-slate-300 text-slate-600 font-semibold hover:bg-slate-50 transition-colors p-2 w-auto';
+const styles = tv(
+  {
+    base: 'button',
+    defaultVariants: { variant: 'solid', size: 'md' },
+    variants: {
+      variant: {
+        solid: 'button--variant_solid',
+        outline: 'button--variant_outline',
+        ghost: 'button--variant_ghost',
+        link: 'button--variant_link',
+        subtle: 'button--variant_subtle',
+      },
+      size: {
+        xs: 'button--size_xs',
+        sm: 'button--size_sm',
+        md: 'button--size_md',
+        lg: 'button--size_lg',
+        xl: 'button--size_xl',
+        '2xl': 'button--size_2xl',
+      },
+    },
+  },
+  { twMerge: false }
+);
 
-const Button = (props: ButtonProps) => {
-  const { children, class: className, ...rest } = props;
+export const Button = (props: ButtonProps) => {
+  const { size, variant, className, children, ...buttonProps } = props;
 
   return (
-    <button class={`${buttonClass} ${className || ''}`} {...rest}>
+    <button className={styles({ size, variant, className })} {...buttonProps}>
       {children}
     </button>
   );
@@ -15,4 +38,7 @@ const Button = (props: ButtonProps) => {
 
 export default Button;
 
-type ButtonProps = Hono.ButtonHTMLAttributes & PropsWithChildren;
+type ButtonVariantProps = VariantProps<typeof styles>;
+type ButtonProps = Hono.ButtonHTMLAttributes &
+  ButtonVariantProps &
+  PropsWithChildren;

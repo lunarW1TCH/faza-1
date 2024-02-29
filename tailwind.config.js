@@ -1,6 +1,9 @@
+const { parkwindPlugin } = require('@park-ui/tailwind-plugin')
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.tsx'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -8,5 +11,6 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [parkwindPlugin],
+  darkMode: ['class'],
 };
