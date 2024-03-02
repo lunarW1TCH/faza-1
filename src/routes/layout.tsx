@@ -3,8 +3,11 @@ import { html } from 'hono/html';
 import Nav from '../components/layout/nav';
 import Footer from '../components/layout/footer';
 import Button from '../components/ui/button';
+import VStack from '~/components/containers/v-stack';
+import HStack from '~/components/containers/h-stack';
 
 const Layout: FC<PropsWithChildren> = (props) => {
+  const { children } = props;
   return (
     <html lang='en'>
       <head>
@@ -21,23 +24,11 @@ const Layout: FC<PropsWithChildren> = (props) => {
           href='https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'
           rel='stylesheet'
         />
-        <title>Document</title>
+        <title>Faza 1</title>
       </head>
       <body class='flex h-full flex-col'>
         <Nav />
-        <main class='flex flex-col grow'>
-          <p class='text-3xl font-bold hover:text-red-700'>miau</p>
-          {props.children}
-          <div class='bg-red-400'>polska</div>
-          <button x-on:click="alert('Hello World!')">Say Hi</button>
-          {html` <button @click="alert('Hello World!')">btn</button> `}
-          <div class='flex flex-col' x-data='{ count: 0 }'>
-            <button x-on:click='count++'>click</button>
-            <button x-on:click="console.log('oi')">cl</button>
-            <span x-data x-text='count'></span>
-          </div>
-          <Button variant='ghost'>Miau</Button>
-        </main>
+        <main class='flex flex-col grow'>{children}</main>
         <Footer />
       </body>
     </html>

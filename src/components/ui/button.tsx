@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'hono/jsx';
+import { PropsWithChildren, type FC } from 'hono/jsx';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 const styles = tv(
@@ -26,11 +26,14 @@ const styles = tv(
   { twMerge: false }
 );
 
-export const Button = (props: ButtonProps) => {
-  const { size, variant, className, children, ...buttonProps } = props;
+const Button: FC<ButtonProps> = (props: ButtonProps) => {
+  const { size, variant, class: className, children, ...buttonProps } = props;
 
   return (
-    <button className={styles({ size, variant, className })} {...buttonProps}>
+    <button
+      class={styles({ size, variant, className: className as string })}
+      {...buttonProps}
+    >
       {children}
     </button>
   );
