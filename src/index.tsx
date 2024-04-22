@@ -10,6 +10,7 @@ import Home from './routes/page';
 import Todo1 from './routes/todo1/page';
 import Todo2 from './routes/todo2/page';
 import Todo3 from './routes/todo3/page';
+import Klient from './routes/klient/page';
 
 const app = new Hono();
 
@@ -46,6 +47,15 @@ app.get('/todo3', (c) => {
   return c.render(
     <Layout>
       <Todo3 />
+    </Layout>
+  );
+});
+
+// ! ręczne dzielenie skryptów klienckich i ich dodawanie, next robi to sam
+app.get('/klient', (c) => {
+  return c.render(
+    <Layout addClientScript>
+      <Klient />
     </Layout>
   );
 });

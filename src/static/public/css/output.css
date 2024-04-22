@@ -6896,6 +6896,11 @@ body {
   position: relative;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -6906,6 +6911,14 @@ body {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[200rem\] {
+  width: 200rem;
 }
 
 .w-full {
@@ -6946,11 +6959,6 @@ body {
 
 .border-t-2 {
   border-top-width: 2px;
-}
-
-.bg-neutral-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(212 212 212 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-100 {
