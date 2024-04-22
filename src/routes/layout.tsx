@@ -1,10 +1,6 @@
 import type { FC, PropsWithChildren } from 'hono/jsx';
-import { html } from 'hono/html';
 import Nav from '../components/layout/nav';
 import Footer from '../components/layout/footer';
-import Button from '../components/ui/button';
-import VStack from '~/components/containers/v-stack';
-import HStack from '~/components/containers/h-stack';
 
 const Layout: FC<PropsWithChildren> = (props) => {
   const { children } = props;
@@ -28,7 +24,9 @@ const Layout: FC<PropsWithChildren> = (props) => {
       </head>
       <body class='flex h-full flex-col'>
         <Nav />
-        <main class='flex flex-col grow'>{children}</main>
+        <main class='flex flex-col grow bg-neutral-100 items-center justify-center'>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

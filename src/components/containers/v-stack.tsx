@@ -1,6 +1,6 @@
 import type { FC, PropsWithChildren } from 'hono/jsx';
 
-const VStack: FC<VStackProps> = (props: VStackProps) => {
+const VStack: FC<VStackProps> = (props) => {
   const { class: className, children, ...vStackProps } = props;
 
   return (

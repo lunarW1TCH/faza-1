@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "tsx watch src/index.tsx",
-    "tailwind": "bunx tailwindcss -i ./src/routes/input.css -o ./src/static/public/css/output.css --watch"
+    "tailwind": "bunx tailwindcss -i ./src/routes/input.css -o ./src/static/public/css/output.css --watch",
+    "setup": "rm -rf node_modules && bun install"
   },
   "dependencies": {
     "@hono/node-server": "^1.7.0",
@@ -14,7 +15,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
-    "tsx": "^3.12.2"
+    "tsx": "^3.12.2",
+    "typescript": "^5.4.5"
   },
   "type": "module"
 }

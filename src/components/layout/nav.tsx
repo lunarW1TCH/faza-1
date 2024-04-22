@@ -1,23 +1,25 @@
 import type { FC } from 'hono/jsx';
-import Link from '../ui/link';
+import buttonRecipe, { buttonGhost } from '~/styles/button';
 
 const Nav: FC = () => {
   return (
-    <nav class='flex w-full my-2 mx-4'>
-      <Link href='/' class='text-2xl font-light text-center w-24'>
+    <nav class='flex w-full py-2 px-4 border-b-2'>
+      <a href='/' class={linkClass}>
         Home
-      </Link>
-      <Link href='/todo1' class='text-2xl font-light text-center w-24'>
+      </a>
+      <a href='/todo1' class={linkClass}>
         Todo 1
-      </Link>
-      <Link href='/todo2' class='text-2xl font-light text-center w-24'>
+      </a>
+      <a href='/todo2' class={linkClass}>
         Todo 2
-      </Link>
-      <Link href='/todo3' class='text-2xl font-light text-center w-24'>
+      </a>
+      <a href='/todo3' class={linkClass}>
         Todo 3
-      </Link>
+      </a>
     </nav>
   );
 };
 
 export default Nav;
+
+const linkClass = `text-2xl font-light text-center w-24 ${buttonGhost}`;

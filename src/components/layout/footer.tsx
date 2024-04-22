@@ -1,9 +1,7 @@
-import Text from '../ui/text';
-
 const Footer = () => {
   return (
-    <footer class='w-full text-center'>
-      <Text as='span'>&copy; 2024 Adrian Żegnałek</Text>
+    <footer class='w-full text-center border-t-2'>
+      <span>&copy; 2024 Adrian Żegnałek</span>
     </footer>
   );
 };

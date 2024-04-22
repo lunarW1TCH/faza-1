@@ -1,5 +1,4 @@
-const { parkwindPlugin } = require('@park-ui/tailwind-plugin')
-
+const { parkwindPlugin } = require('@park-ui/tailwind-plugin');
 
 /** @type {import('tailwindcss').Config} */
 export default {
