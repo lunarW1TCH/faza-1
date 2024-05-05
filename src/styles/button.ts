@@ -30,3 +30,6 @@ export default buttonRecipe;
 export const buttonSolid = buttonRecipe({ variant: 'solid' });
 export const buttonGhost = buttonRecipe({ variant: 'ghost' });
 export const buttonOutline = buttonRecipe({ variant: 'outline' });
+
+export const buttonBaseClasses =
+  'items-center appearance-none cursor-pointer inline-flex font-semibold justify-center outline-none rounded duration-200 transition-colors transition-shadow ease-default select-none align-middle whitespace-nowrap h-10 min-w-10 text-sm px-4 [&_svg]:w-5 [&_svg]:h-5';

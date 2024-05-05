@@ -1,5 +1,7 @@
 import type { FC } from 'hono/jsx';
 import VStack from '~/components/containers/v-stack';
+import { buttonBaseClasses } from '~/styles/button';
+
 import cardRecipe from '../styles/card';
 
 const Home: FC = () => {
@@ -11,6 +13,7 @@ const Home: FC = () => {
         </div>
         <div class={cardRecipe().body()}></div>
       </div>
+      <button class={buttonBaseClasses}>Test</button>
     </VStack>
   );
 };

@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
       },
+      transitionTimingFunction: {
+        default: 'cubic-bezier(0.2, 0.0, 0, 1.0)',
+      },
     },
   },
   plugins: [parkwindPlugin],
