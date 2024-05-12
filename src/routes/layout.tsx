@@ -1,6 +1,7 @@
 import type { FC, JSXNode, PropsWithChildren } from 'hono/jsx';
-import Nav from '../components/layout/nav';
+
 import Footer from '../components/layout/footer';
+import Nav from '../components/layout/nav';
 
 const Layout: FC<PropsWithChildren & { addClientScript?: boolean }> = (
   props
@@ -10,10 +11,6 @@ const Layout: FC<PropsWithChildren & { addClientScript?: boolean }> = (
   return (
     <html lang='en'>
       <head>
-        <script
-          defer
-          src='https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js'
-        ></script>
         {addClientScript && (
           <script defer src='/static/public/js/klient.js'></script>
         )}

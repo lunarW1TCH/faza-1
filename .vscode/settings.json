@@ -1,7 +1,7 @@
 {
   "cSpell.words": ["Hono", "parkwind", "tailwindcss"],
   "tailwindCSS.experimental.classRegex": [
-    ["Classes \\=([^;]*);", "'([^']*)'"],
+    [" \\=([^;]*);", "'([^']*)'"],
     ["Classes \\=([^;]*);", "\"([^\"]*)\""],
     ["Classes \\=([^;]*);", "\\`([^\\`]*)\\`"]
   ]
