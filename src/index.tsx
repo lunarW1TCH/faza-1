@@ -5,7 +5,7 @@ import { prettyJSON } from 'hono/pretty-json';
 import { serve } from '@hono/node-server';
 import { serveStatic } from '@hono/node-server/serve-static';
 
-import api from './api';
+import api from '../api';
 import Indicator1 from './routes/indicator-1/page';
 import Indicator2 from './routes/indicator-2/page';
 import Indicator3 from './routes/indicator-3/page';
@@ -61,12 +61,12 @@ app.get('/klient', (c) => {
   );
 });
 
-app.route('/api', api);
-
 const port = 2137;
 console.log(`Server is running on http://localhost:${port}`);
 
-serve({
-  fetch: app.fetch,
-  port,
-});
+export default app;
+
+// serve({
+//   fetch: app.fetch,
+//   port,
+// });

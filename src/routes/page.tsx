@@ -18,8 +18,13 @@ const Home: FC = () => {
           <h5 class='font-semibold mb-2'>Pozostałe aplikacje:</h5>
           <HStack class='w-full justify-between'>
             <span>Faza 2:</span>
-            <a target='_blank' rel='noreferrer noopener' class={linkRecipe}>
-              todo.vercel.app
+            <a
+              target='_blank'
+              rel='noreferrer noopener'
+              href='https://faza-2.vercel.app/'
+              class={linkRecipe}
+            >
+              faza-2.vercel.app
             </a>
           </HStack>
           <HStack class='w-full justify-between'>
