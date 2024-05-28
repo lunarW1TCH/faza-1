@@ -1,8 +1,7 @@
 ```sh
-npm install
-npm run dev
+docker build . -t faza-1
 ```
 
-```
-open http://localhost:3000
+```sh
+docker run -p 3000:3000 faza-1
 ```

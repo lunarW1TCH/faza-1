@@ -1,11 +1,9 @@
 import { Hono } from 'hono';
+import { serveStatic } from 'hono/bun';
+import { cors } from 'hono/cors';
 import { logger } from 'hono/logger';
 import { prettyJSON } from 'hono/pretty-json';
 
-import { serve } from '@hono/node-server';
-import { serveStatic } from '@hono/node-server/serve-static';
-
-import api from '../api';
 import Indicator1 from './routes/indicator-1/page';
 import Indicator2 from './routes/indicator-2/page';
 import Indicator3 from './routes/indicator-3/page';
@@ -19,6 +17,7 @@ app.use(logger());
 app.use(prettyJSON());
 
 app.use('/static/*', serveStatic({ root: './src' }));
+app.use('/*', cors({ origin: '*' }));
 
 app.get('/', (c) => {
   return c.render(
@@ -52,7 +51,6 @@ app.get('/indicator-3', (c) => {
   );
 });
 
-// ! ręczne dzielenie skryptów klienckich i ich dodawanie, next robi to sam
 app.get('/klient', (c) => {
   return c.render(
     <Layout addClientScript>
@@ -61,12 +59,4 @@ app.get('/klient', (c) => {
   );
 });
 
-const port = 2137;
-console.log(`Server is running on http://localhost:${port}`);
-
 export default app;
-
-// serve({
-//   fetch: app.fetch,
-//   port,
-// });
