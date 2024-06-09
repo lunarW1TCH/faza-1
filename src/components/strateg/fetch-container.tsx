@@ -4,6 +4,7 @@ import linkRecipe from '~/styles/link';
 
 import VStack from '../containers/v-stack';
 import BarGraph from './bar-graph';
+import ErrorFallback from './error-fallback';
 
 import type { Numeric } from '~/types';
 
@@ -15,13 +16,13 @@ import type {
 const FetchContainer = async (props: FetchContainerProps) => {
   const { url, pathname } = props;
 
-  const title = getTitle(pathname);
-
   const data = (await fetcher(url)) as StrategResponseBody<Numeric>;
   const data2021 = Object.entries(data.real_values['2021']).map((entry) => ({
     name: voivodeships[entry[0] as VoivodeshipID],
     value: parseFloat(entry[1]),
   }));
+
+  if (!data || !data2021) return <ErrorFallback />;
 
   return (
     <VStack class='my-4'>

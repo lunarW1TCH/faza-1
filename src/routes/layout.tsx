@@ -17,6 +17,7 @@ const Layout: FC<PropsWithChildren & { addClientScript?: boolean }> = (
         <meta charset='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link href='/static/public/css/output.css' rel='stylesheet' />
+
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link
