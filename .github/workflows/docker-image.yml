@@ -23,7 +23,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag lunarwitch/faza1:latest
+      run: docker build . --file Dockerfile --tag dockerearly777/lunarwitch_faza1:latest
 
     - name: Push the Docker image
-      run: docker push lunarwitch/faza1:latest
+      run: docker push dockerearly777/lunarwitch_faza1:latest
