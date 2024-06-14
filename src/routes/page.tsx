@@ -12,7 +12,13 @@ const Home: FC = () => {
       <div class={`${cardRecipe.root} min-w-[300px]`}>
         <div class={cardRecipe.header}>
           <h3 class={cardRecipe.title}>Faza 1</h3>
-          <p class={cardRecipe.description}>Aplikacja fazy 1 do pracy "..."</p>
+          <p class={cardRecipe.description}>Aplikacja fazy 1 do pracy:</p>
+          <p class={cardRecipe.description}>
+            Wpływ wybranych technologii webowych
+          </p>
+          <p class={cardRecipe.description}>
+            na działanie aplikacji w ujęciu biznesowym
+          </p>
         </div>
         <div class={cardRecipe.body}>
           <h5 class='font-semibold mb-2'>Pozostałe aplikacje:</h5>

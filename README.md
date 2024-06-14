@@ -1,7 +1,1 @@
-```sh
-docker build . -t faza-1
-```
-
-```sh
-docker run --env-file .env -p 3000:3000 faza-1
-```
+Aplikacja Fazy 1 do pracy licencjackiej: Wpływ wybranych technologii webowych na działanie aplikacji w ujęciu biznesowym

@@ -8,7 +8,7 @@ const Indicator3: FC = () => {
 
   return (
     <VStack>
-      <FetchContainer url={fetchUrl} pathname='/indicator-2' />
+      <FetchContainer url={fetchUrl} pathname='/indicator-3' />
     </VStack>
   );
 };
